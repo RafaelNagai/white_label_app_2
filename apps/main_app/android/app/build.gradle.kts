@@ -14,6 +14,10 @@ android {
         targetCompatibility = JavaVersion.VERSION_17
     }
 
+    buildFeatures {
+        resValues = true
+    }
+
     defaultConfig {
         // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
         applicationId = "com.example.main_app"
@@ -30,6 +34,20 @@ android {
             // TODO: Add your own signing config for the release build.
             // Signing with the debug keys for now, so `flutter run --release` works.
             signingConfig = signingConfigs.getByName("debug")
+        }
+    }
+
+    flavorDimensions += "client"
+    productFlavors {
+        create("clientA") {
+            dimension = "client"
+            applicationId = "com.example.main_app.clientA"
+            resValue(type = "string", name = "app_name", value = "Client A")
+        }
+        create("clientB") {
+            dimension = "client"
+            applicationId = "com.example.main_app.clientB"
+            resValue(type = "string", name = "app_name", value = "Client B")
         }
     }
 }
