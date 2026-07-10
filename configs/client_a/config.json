@@ -1,0 +1,20 @@
+{
+    "clientId": "client_a",
+    "identity": {
+        "appName": "Client A",
+        "android": {
+            "applicationId": "com.wlabel.clienta"
+        },
+        "ios": {
+            "bundleId": "com.wlabel.clienta"
+        }
+    },
+    "theme": {
+        "light": {
+            "primary": "00AA00"
+        },
+        "dark": {
+            "primary": "00AA00"
+        }
+    }
+}
